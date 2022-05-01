@@ -5,6 +5,12 @@
 }
 
 #canvas {
-  height: 100vh;
-  border: 1px solid red;
+  /* 100vh和100vw表示与屏幕同宽高,但是canvas一开始设置的宽高就是100*100，如果通过设置宽高，那么canvas也只会
+  在原来的像素上拉伸，会变模糊。想不适用100vh和100vw,解决方法是根据用户屏幕宽高调整canvas的宽高,可以用js获取
+  用户屏幕宽高。用截图工具测出来的宽高，如果是4k屏，那么宽高要/2，得到的就是屏幕宽高
+  但是不能使用document.body.clientHeight获取，因为body的高度是被内容撑开的，不会占满全屏，用
+  document.documentElement.clientHeight*/
+  /* height: 100vh;
+  width: 100vw; */
+  display: block;
 }
